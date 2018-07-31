@@ -195,7 +195,7 @@ public class StatszZPageHandlerTest {
     StatszZPageHandler handler = StatszZPageHandler.create(mockViewManager);
     OutputStream output = new ByteArrayOutputStream();
     handler.emitHtml(ImmutableMap.of(QUERY_PATH, "/my_view"), output);
-    assertThat(output.toString()).contains("No Stats found for View my_view.");
+    assertThat(output.toString()).contains("No Stats found for View: my_view.");
   }
 
   private static void assertContainsMeasure(OutputStream output, Measure measure) {
